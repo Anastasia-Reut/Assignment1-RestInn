@@ -23,10 +23,12 @@
 .links{
     font-family: Dancing Script;
     color: #3f6a85;
+    font-size:1.5rem;
 }
 .link:focus,.link:hover{
     color:#3f6a85;
     font-family: Dancing Script;
+    font-size:1.5rem;
 }
 
 body, html {
@@ -91,6 +93,10 @@ td {
     width: 800px;
     border: solid 1px rgb(148, 148, 148);
     margin: 0 auto 0 auto;
+}
+
+.container p{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contentContainer{
