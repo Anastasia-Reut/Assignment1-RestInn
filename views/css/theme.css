@@ -31,9 +31,6 @@
 
 body, html {
     background: white;
-    background: linear-gradient( to bottom, #a7bdcc, white);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     overflow: auto;
 }
@@ -85,15 +82,14 @@ td {
 .logo {
     border: 1px solid #ddd;
     background-color: transparent;
-    border-radius: 0px;
+    border-radius: 10px;
     padding: 0px;
-    width: 50px;
     height: 50px;
 }
 
 .container {
     width: 800px;
-    border: solid 1px white;
+    border: solid 1px rgb(148, 148, 148);
     margin: 0 auto 0 auto;
 }
 
