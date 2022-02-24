@@ -100,7 +100,7 @@ td {
     background-color: whitesmoke;
 }
 
-.container p{
+.container p, li{
     font-family: Arial, Helvetica, sans-serif;
 }
 
