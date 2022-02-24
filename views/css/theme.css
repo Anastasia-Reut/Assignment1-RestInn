@@ -17,15 +17,17 @@
 
 .brand:focus, .brand:hover{
     color:#2d556e;
-    text-decoration:none;    
+    text-decoration:none;
+    font-family: Dancing Script;  
 }
 
 .links{
     font-family: Dancing Script;
     color: #3f6a85;
     font-size:1.5rem;
+    text-decoration:none;
 }
-.link:focus,.link:hover{
+.links:focus, .links:hover{
     color:#3f6a85;
     font-family: Dancing Script;
     font-size:1.5rem;
@@ -46,12 +48,14 @@ h1, h2, h3, h4, h5, h6 {
 a{
     color:#3f6a85;
     text-decoration:none;
-    background-color:transparent
+    background-color:transparent;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover{
     color:#2d556e;
-    text-decoration:underline
+    text-decoration:underline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table, th, td {
