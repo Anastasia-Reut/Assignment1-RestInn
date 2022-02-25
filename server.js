@@ -24,6 +24,9 @@ app.use(express.static("public"));
 const {engine} = require("express-handlebars");
 app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+const uri = process.env.MONGODB_URI;
+
 //#endregion
 
 //#region Routes
@@ -57,3 +60,5 @@ app.get("/logout", (req, res) => {
 //#region Custom Functions and Startup
 app.listen(HTTP_PORT, OnHttpStart);
 //#endregion
+
+//heroku config:set MONGODB_URI="mongodb+srv://jasa_admin:senecaCAPproject@cluster0.j5nek.mongodb.net/fierce-eyrie-60970?retryWrites=true&w=majority"
