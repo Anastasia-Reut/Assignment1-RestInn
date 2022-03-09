@@ -1,0 +1,47 @@
+0 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install', 'express' ]
+1 info using npm@7.21.1
+2 info using node@v16.9.1
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/anastasiareut/Desktop/Seneca/WEB 700/web700-app/.npmrc Completed in 1ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:/Users/anastasiareut/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 2ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 8ms
+19 timing npm:load:configload Completed in 8ms
+20 timing npm:load:setTitle Completed in 18ms
+21 timing npm:load:setupLog Completed in 1ms
+22 timing config:load:flatten Completed in 2ms
+23 timing npm:load:cleanupLog Completed in 2ms
+24 timing npm:load:configScope Completed in 0ms
+25 timing npm:load:projectScope Completed in 0ms
+26 timing npm:load Completed in 33ms
+27 timing arborist:ctor Completed in 1ms
+28 timing idealTree Completed in 2ms
+29 timing command:install Completed in 17ms
+30 verbose stack JSONParseError: Unexpected end of JSON input while parsing empty string
+30 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json-fast/index.js:11:61
+30 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:203:7)
+30 verbose stack     at async Promise.all (index 1)
+30 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:147:5)
+30 verbose stack     at async Install.install (/usr/local/lib/node_modules/npm/lib/install.js:150:5)
+31 verbose cwd /Users/anastasiareut/Desktop/Seneca/WEB 700/web700-app
+32 verbose Darwin 19.6.0
+33 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "express"
+34 verbose node v16.9.1
+35 verbose npm  v7.21.1
+36 error code EJSONPARSE
+37 error path /Users/anastasiareut/Desktop/Seneca/WEB 700/web700-app/package.json
+38 error JSON.parse Unexpected end of JSON input while parsing empty string
+39 error JSON.parse Failed to parse JSON data.
+39 error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+40 verbose exit 1
