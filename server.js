@@ -14,15 +14,15 @@ var HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config();
 
-function OnHttpStart(){
+function OnHttpStart() {
     console.log("Express server started on port: " + HTTP_PORT);
 }
 
 app.use(express.static("views"));
 app.use(express.static("public"));
 
-const {engine} = require("express-handlebars");
-app.engine('.hbs', engine({extname: '.hbs'}));
+const { engine } = require("express-handlebars");
+app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
 const uri = process.env.MONGODB_URI;
@@ -32,17 +32,19 @@ const uri = process.env.MONGODB_URI;
 //#region Routes
 
 //#region GeneralPages
-app.get("/", (req, res) => {res.render("home", {layout: false});});
-app.get("/about", (req, res) => {res.render("about", {layout: false});});
-app.get("/contacts", (req, res) => {res.render("contacts", {layout: false});});
-app.get("/terms", (req, res) => {res.render("terms", {layout: false});});
-app.get("/prpolicy", (req, res) => {res.render("prpolicy", {layout: false});});
-app.get("/reviews", (req, res) => {res.render("reviews", {layout: false});});
-app.get("/articles", (req, res) => {res.render("articles", {layout: false});});
+app.get("/", (req, res) => { res.render("home", { layout: false }); });
+app.get("/about", (req, res) => { res.render("about", { layout: false }); });
+app.get("/contacts", (req, res) => { res.render("contacts", { layout: false }); });
+app.get("/terms", (req, res) => { res.render("terms", { layout: false }); });
+app.get("/prpolicy", (req, res) => { res.render("prpolicy", { layout: false }); });
+app.get("/reviews", (req, res) => { res.render("reviews", { layout: false }); });
+app.get("/articles", (req, res) => { res.render("articles", { layout: false }); });
+app.get("/productsList", (req, res) => { res.render("productListing", { layout: false }); });
+app.get("/product", (req, res) => { res.render("product", { layout: false }); });
 //#endregion
 
 //#region Authentication
-app.get("/login", (req, res) => {res.render("login", {layout: false});});
+app.get("/login", (req, res) => { res.render("login", { layout: false }); });
 app.get("/logout", (req, res) => {
     // todo logout stuff
     res.redirect("/");

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JASA online pharmacy</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        {{> header}}
+        <div class="contentContainer">
+            <div class="row">
+                <main>
+                    <center>
+                        <input class="searchKey" type="text" id="searchKey" name="searchKey"><button
+                            type="button">Search</button><br><br>
+                    </center>
+                    <button class="filter" type="button">Filter</button>
+                    <table class="productList">
+
+                        <tr>
+                            <th>
+                                <img src="/images/Capture.jpg" alt="Product 1" class="productListImg">
+                                <p>
+                                    <a href="/product">Product 1</a>
+                                <p> Details for product 1</p>
+                                </p>
+                            </th>
+                            <th>
+                                <img src="/images/Capture.jpg" alt="Product 2" class="productListImg">
+                                <p>
+                                    <a href="/product">Product 2</a>
+                                <p> Details for product 2</p>
+                                </p>
+                            </th>
+                            <th>
+                                <img src="/images/Capture.jpg" alt="Product 3" class="productListImg">
+                                <p>
+                                    <a href="/product">Product 3</a>
+                                <p> Details for product 3</p>
+                                </p>
+                            </th>
+                            <th>
+                                <img class="productListImg" src="/images/Capture.jpg" alt="Product 4">
+                                <p>
+                                    <a href="/product">Product 4</a>
+                                <p> Details for product 4</p>
+                                </p>
+                            </th>
+                        </tr>
+                    </table>
+                </main>
+                {{> footer}}
+            </div>
+</body>
+
+</html>
