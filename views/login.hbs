@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>USER LOGIN</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            {{> header }}
+
+            <div class="contentContainer">
+                <h1>USER LOGIN</h1>
+                <form method="post" action="/login">
+                    <label class="fixedlabel">Username</label>
+                    <input type="text" name="username">
+                    <br/>
+                    <label class="fixedlabel">Password</label>
+                    <input type="password" name="password">
+                    <br/>
+                    <label class="fixedlabel"></label>
+                    <button type="submit">Login</button>
+                </form>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/register">SignUp</a></li>
+                </ul>
+            </div>
+            
+            {{> footer }}
+
+        </div>
+
+    </body>
+</html>
