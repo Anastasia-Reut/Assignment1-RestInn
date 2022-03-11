@@ -70,6 +70,7 @@ app.get("/logout", (req, res) => {
 //#region AuthorizedUsers
 app.get("/prescription", (req, res) => {res.render("prescription", {layout: false});});
 app.get("/cart", (req, res) => {res.render("cart", {layout: false});});
+app.get("/checkout", (req, res) => {res.render("checkout", {layout: false});});
 //#endregion
 
 //#region AdminPages

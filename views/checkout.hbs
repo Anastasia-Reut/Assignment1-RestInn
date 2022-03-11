@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JASA online pharmacy</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        {{> header}}
+        <div class="contentContainer">
+            <div class="row">
+                <main>
+                    <h1>Your cart</h1>   
+                    <div id="parent">
+                        <div id="left">
+                            <label for="address">Choose from saved addresses</label>
+                            {{#if address}}
+                                <select class="form-control" name="user[address]" id="address">
+                                <option value="">Select Address</option>
+                                    {{#each addresses}}
+                                        <option value="{{addressID}}">{{address}}</option>
+                                    {{/each}}
+                                </select>
+                            {{else}}
+                                <div>No Addresses</div>
+                            {{/if}}
+                            <button>Add new address</button>
+                            <label>Choose delivery type:</label><br />
+                            <label  class="checkbox-inline">
+                                <input type="radio" name="delivery[status]" value="Standard" /> Standard
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="delivery[status]" value="Priority" /> Priority
+                            </label>
+                            <label>Choose payment type:</label><br />
+                            <label  class="checkbox-inline">
+                                <input type="radio" name="pay" value="Card" /> Card
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="pay" value="etransfer" /> E-transfer
+                            </label>
+                        </div>
+                        <div id="right">
+                            <h2>Payment Amount</h2>
+                            <p>Product 1____4.00<br/>
+                            Product 2____2.00</p>
+                            <h2>Total: 6.00</h2>
+                            <button>Confirm and Continue</button>
+                        </div>
+                    </div>                     
+                </main>    
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+</body>
+</html>
