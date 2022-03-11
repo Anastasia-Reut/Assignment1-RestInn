@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JASA online pharmacy - ABOUT US</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/css/theme.css" type="text/css" />
+	</head>
+
+	<body>
+        <div class="container">
+            {{> header}}
+            <div class="contentContainer">
+                <div class="row">
+                    <main class="col-md-12">
+                        <br>
+                        <h1>Welcome, doctor XXX!</h1>
+                    <br>
+                    <form action="/doctor_prescription" method="POST">
+                        <div class="form-item">   
+                            <label for="license">Doctor License Number</label>
+                            <input type="text" id="license" name="license">
+                        </div>
+                        <button>Verify</button>
+                        <div class="form-item">   
+                            <label for="firstname">Patient First Name</label>
+                            <input type="text" id="firstname" name="firstname">
+                        </div>
+                        <div class="form-item">
+                            <label for="lastname">Patient First Name</label>
+                            <input type="text" id="lastname" name="lastname">
+                        </div>   
+                        <div class="form-item">
+                            <label for="dob">Date of Birth</label>
+                            <input type="text" name="dob" id="dob">
+                        </div>   
+                        <div class="form-item">
+                            <label for="medical_no">Medical ID Number</label>
+                            <input type="text" name="medical_no" id="medical_no">
+                        </div>    
+                        <div class="form-item">
+                            <label for="product_description">Prescribed drug</label>
+                            <input type="text" name="product_description" id="product_description">
+                        </div> 
+                        <div class="form-item">
+                            <label for="quantity">Quantity</label>
+                            <input type="text" name="quantity" id="quantity">
+                        </div>   
+                        <div class="form-item">
+                            <label for="frequency">Frequency</label>
+                            <input type="text" name="frequency" id="frequency">
+                        </div>        
+                        <div class="form-item">
+                            <label for="period">Period</label>
+                            <input type="text" name="period" id="period">
+                        </div>  
+                        <div class="form-item">
+                            <label for="from_date">From Date</label>
+                            <input type="text" name="from_date" id="from_date">
+                        </div>    
+                        <div class="form-item">
+                            <label for="to_date">To Date</label>
+                            <input type="text" name="to_date" id="to_date">
+                        </div>
+                        <button>Add more drugs</button>
+                        <div class="form-item">
+                            <label for="notes">Notes</label>
+                            <input type="text" name="notes" id="notes">
+                        </div>    
+                            <button>Save</button>
+                        </form>
+                    </main>
+                </div>                
+            </div>
+            {{> footer}}
+        </div>
+	</body>
+</html>

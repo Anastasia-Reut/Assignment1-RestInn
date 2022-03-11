@@ -4,6 +4,7 @@
     Title: Online-pharmacy
     Version:
         1.0.0 - Feb 24, 2022 - Anna - Initial Version
+        1.0.1 - Mar 9, 2022 - Anastasia, Jay, Anna - more pages added
 */
 //#endregion
 
@@ -39,6 +40,8 @@ app.get("/terms", (req, res) => {res.render("terms", {layout: false});});
 app.get("/prpolicy", (req, res) => {res.render("prpolicy", {layout: false});});
 app.get("/reviews", (req, res) => {res.render("reviews", {layout: false});});
 app.get("/articles", (req, res) => {res.render("articles", {layout: false});});
+app.get("/product", (req, res) => {res.render("product", {layout: false});});
+app.get("/productListing", (req, res) => {res.render("productListing", {layout: false});});
 //#endregion
 
 //#region Authentication
@@ -65,6 +68,8 @@ app.get("/logout", (req, res) => {
 //#endregion
 
 //#region AuthorizedUsers
+app.get("/prescription", (req, res) => {res.render("prescription", {layout: false});});
+app.get("/cart", (req, res) => {res.render("cart", {layout: false});});
 //#endregion
 
 //#region AdminPages

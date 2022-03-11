@@ -115,3 +115,17 @@ label{
 .form-item{
     margin-bottom: 10px;
 }
+#parent {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #left {
+    border-bottom: 1px solid lightgray;
+    width: 100px;
+  }
+  
+  #right {
+    border-bottom: 1px solid lightgray;
+    width: 40%;
+  }
