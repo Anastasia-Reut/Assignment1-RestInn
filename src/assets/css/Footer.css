@@ -1,0 +1,22 @@
+footer {
+  min-height: 50vh;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+  gap: 2%;
+  padding: 6rem 0;
+}
+
+footer .container .column > div {
+  margin-top: 0.5rem;
+}
+
+footer .column {
+  text-align: left;
+}
+
+footer h4 {
+  margin-bottom: 1rem;
+}

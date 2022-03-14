@@ -1,0 +1,47 @@
+.property-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  color: inherit !important;
+  &:hover {
+    background-color: #f3f3f3;
+  }
+  .image {
+    flex-basis: 20%;
+    padding-top: 5rem;
+    background-size: cover;
+  }
+  .property-details-wrapper {
+    padding-left: 1rem;
+    flex-basis: 80%;
+    .location {
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+      h5.location-title {
+        margin-top: 0.5rem;
+      }
+    }
+    .distance {
+      font-size: 1rem;
+    }
+    .rating-wrapper {
+      .rating {
+        padding: 0.2rem 0.5rem;
+        background-color: #3a3;
+        width: auto;
+        color: #fff;
+        border-radius: 0.3rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
+    }
+    .reviews {
+
+    }
+    .features-wrapper {
+      .feature {
+        border: 1px solid #ccc
+      }
+    }
+  }
+}

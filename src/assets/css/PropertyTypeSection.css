@@ -1,0 +1,14 @@
+section#property-type-section {
+    margin-top: 5rem;
+    min-height: 50vh;
+}
+
+.property-type-cards {
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    gap: 2%;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}

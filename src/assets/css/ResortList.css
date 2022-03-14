@@ -1,0 +1,69 @@
+#section-resort-list {
+    margin: 5rem auto;
+}
+
+.resort-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    gap: 2%;
+}
+
+
+#section-resort-list h1,
+#about-section h1,
+#login-section h1,
+#register-section h1 {
+    margin: 16px 0;
+
+}
+
+.resort-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    background-color: white;
+    overflow: hidden;
+}
+
+.resort-card .image {
+    height: 20rem;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-transition: all .25s .05s ease-out;
+    transition: all .25s .05s ease-out;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.resort-card:hover .image {
+    background-size: auto 110%;
+}
+
+.resortContent {
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resortContent h3 {
+    font-size: 1.2rem;
+}
+
+#resort-description-section {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#resort-description-section > div {
+    margin-top: 16px;
+}
+
+.resort-description-section > img {
+    grid-column: 1;
+}
+
+.resort-description-content-area {
+    grid-column: 2/span 3;
+}

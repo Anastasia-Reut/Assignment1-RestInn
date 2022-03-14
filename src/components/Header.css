@@ -1,0 +1,93 @@
+header {
+    background-color: rgb(3, 37, 65);
+    padding: 0.2rem 0;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1rem;
+    background: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #eee;
+    border: 1px solid #eee;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+header li {
+    display: inline-block;
+    padding: 8px 32px;
+}
+
+img#logo {
+   float: right;
+}
+
+header a {
+    color: #eee;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+}
+
+header a:hover {
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .links {
+
+}
+
+input.search_input {
+    background-color: #eee;
+    border: 0;
+    border-radius: .5rem;
+}
+
+.user-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    background-color: rgb(3, 37, 65);
+    border-radius: 0.5rem !important;
+    width: 100%;
+    font-weight: 500;
+    color: #ddd;
+}
+
+.user-menu.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 2.7rem;
+    width: auto;
+}
+
+.user-menu a {
+    min-width: 5rem;
+    width: 100%;
+    white-space: pre;
+    padding: 0.5rem 2rem;
+}
+
+.user-menu a:hover {
+    color: #fff;
+}
+
+.fa.fa-user-circle {
+    margin-right: 2.5rem
+}

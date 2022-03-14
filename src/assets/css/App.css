@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#main-container {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/*About*/
+
+#about-section {
+
+
+}
+
+
+/*Registration*/
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+
+.form-control label {
+    display: block;
+    margin: 8px 0;
+    color: black;
+}
+
+.form-control input[type="text"], .form-control input[type="password"] {
+    display: block;
+    width: 100%;
+    border: 2px solid black;
+    font-size: 0.9rem;
+    padding: 8px;
+}
+
+.form-control input[type="button"],
+.form-control input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    padding: 8px 0px;
+    margin-top: 16px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-control span {
+    color: #f00;
+    font-size: 0.8rem;
+}
+
+.error > span {
+    display: block;
+}
+
+.success > span {
+    display: none;
+}
+
+
+/*login*/
+
+
+/******** FOOOTER ********/
+footer {
+    background-color: rgb(3, 37, 65);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    padding: 16px 0px 0px 0px
+}
+
+/* Search bar */
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    background-color: #353b48;
+    border-radius: 30px;
+    /*padding: 10px;*/
+}
+
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 450px;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    padding: 0 15px;
+    width: 250px;
+    caret-color: red;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    background: white;
+    color: #e74c3c;
+}

@@ -1,0 +1,7 @@
+.thumbnails {
+    justify-content: center;
+}
+
+.thumbnails > * {
+    cursor: pointer;
+}

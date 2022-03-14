@@ -1,0 +1,135 @@
+#property {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  color: inherit !important;
+  .property-header {
+    display: flex;
+    flex-direction: row;
+    .title-wrapper {
+      width: 70%;
+    }
+    .description {
+      font-size: 0.8rem;
+      color: #666;
+      padding-bottom: 1rem;
+    }
+    .controls-wrapper {
+      width: 30%;
+      > div {
+        text-align: right;
+      }
+      .price {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+      button {
+        padding: 0.5rem 2rem;
+        background-color: #359;
+        color: white;
+        border: 0;
+        border-radius: 1.5rem;
+        float: right;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+
+
+  .property-body {
+    display: flex;
+    flex-direction: row;
+    .image {
+      flex-basis: 60%;
+      padding-top: 25rem;
+      background-size: cover;
+    }
+    .property-details-wrapper {
+      flex-basis: 40%;
+      padding-left: 1rem;
+      .map {
+        width: 100%;
+        padding-top: 30%;
+        border: 1px solid #ddd;
+      }
+      .location {
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1rem;
+        h5.location-title {
+          margin-top: 0.5rem;
+        }
+      }
+      .rules {
+        color: #777;
+        font-size: 0.9rem;
+      }
+      .distance {
+        font-size: 1rem;
+      }
+      .rating-wrapper {
+        margin-top: 2rem;
+        .rating {
+          padding: 0.2rem 0.5rem;
+          background-color: #3a3;
+          width: auto;
+          color: #fff;
+          border-radius: 0.3rem;
+          display: inline-block;
+          margin-right: 0.5rem;
+        }
+      }
+      .reviews {
+
+      }
+      .features-wrapper {
+        .feature {
+          border: 1px solid #ccc
+        }
+      }
+    }
+  }
+
+
+  .property-footer {
+    display: flex;
+    flex-direction: column;
+    .rates-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.5rem;
+    }
+    .rate-wrapper {
+      padding-right: 1rem;
+      flex-basis: 25%;
+      cursor: pointer;
+      &:hover {
+        background-color: #f3f3f3;
+      }
+      .reviewer {
+        font-weight: 600;
+      }
+      .review {
+        margin-top: 1rem;
+      }
+      .rating {
+        float: left;
+        background-color: #33aa33;
+        color: #fff;
+        margin-right: 1rem;
+        padding: 0.2rem 0.8rem;
+        border-radius: 0.5rem;
+        &.bad {
+          background-color: #aa3333
+        }
+      }
+    }
+  }
+
+  h4 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+}

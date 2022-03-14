@@ -1,0 +1,205 @@
+{
+  "resorts":
+  [
+    {
+      "id" : 1,
+      "title" : "Toronto Lovers Island",
+      "price" : 100.00,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort1.webp",
+      "featured" : false,
+      "property_type_id": 1,
+      "description": "This hotel is within 12 minutes drive of еру city centre. It offers an indoor pool, hot tub and rooms with a refrigerator. A work desk and free Wi-Fi are common to all rooms at Toronto Lovers Island. The rooms are equipped with a coffee maker and pay-per-view movies. Room service is available. The Bistro offers breakfast and dinner options, as well as evening cocktails. Toronto Lovers Island also offers a business centre and fitness centre.",
+      "house_rules": "No smoking, No pets allowed",
+      "amenities": ["Wifi","Air conditioning","Flat-screen TV", "Cable channels","Streaming service (like Netflix)", "Refrigerator"],
+      "location": "150 Interchange Way, Toronto",
+      "distance": 1.2,
+      "rating": 4.2
+    },
+    {
+      "id" : 2,
+      "title" : "Brampton Special Condos",
+      "price" : 98.50,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort2.webp",
+      "featured" : false,
+      "property_type_id": 2,
+      "description": "This downtown Brampton, Ontario hotel is less than 10 minutes walk from the Brampton Railway Station and John Labatt Event Centre. It features spacious suites with free WiFi and serves free morning coffee. A full kitchen, including a stove, microwave and refrigerator, is standard in every suite at Brampton Special Condos. All suites feature cable TV, a work desk and a seating area. On-site laundry facilities are available and the hotel offers free passes to a YMCA gym, just 2 minutes' walk away. Brampton International Airport is just 10 km from the hotel. Victoria Park and the Convention Centre are both 5 minutes drive away.",
+      "house_rules": " Non-smoking rooms",
+      "amenities": ["Wifi", "Private kitchen", "Desk", "Kitchenware", "Hairdryer", "Wake-up service", "Toaster", "Soundproofing"],
+      "location": "362 Dundas street, Brampton",
+      "distance": 0.8,
+      "rating": 4.8
+    },
+    {
+      "id" : 3,
+      "title" : "Trinidad and Tobago Island Life Apartments",
+      "price" : 250,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort3.webp",
+      "featured" : false,
+      "property_type_id": 3,
+      "description": "This property is 11 minutes walk from the beach. Situated in Kavala, within 550 m of Rapsani Beach and 2 km of Kalamitsa Beach, Island Apartment offers accommodation with free WiFi, air conditioning, a garden and barbecue facilities. With sea views, this accommodation features a balcony. The apartment features 3 bedrooms, 2 bathrooms, bed linen, towels, a flat-screen TV, a dining area, a fully equipped kitchen, and a patio with garden views. The apartment offers a sun terrace.",
+      "house_rules": "Non-smoking rooms",
+      "amenities": ["Wifi", "Free parking", "Flat-screen TV", "Air conditioning","Sea view", "Cable channels","Streaming service (like Netflix)", "Refrigerator"],
+      "location": " Thessalonikis 63, Kavala, 65403, Greece",
+      "distance": 2.3,
+      "rating": 4.5
+    },
+    {
+      "id" : 4,
+      "title" : "Netflix and Chill House",
+      "price" : 1089.50,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort4.webp",
+      "featured" : false,
+      "property_type_id": 4,
+      "description": "This property is 1 minute walk from the beach. Featuring free WiFi throughout the property, house is located in Kavala, 2.3 km from Archaeological Museum of Kavala. Historical Ethnological Museum Kavala is 11 km away. The accommodation is equipped with a dining area and a seating area with a cable flat-screen TV. There is also a kitchen, equipped with an oven and fridge. A stovetop is also offered, as well as a coffee machine and a kettle. Every unit has a private bathroom with slippers. Towels are available. Luggage storage is provided. Free private indoor parking for motorbikes is possible on site.",
+      "house_rules": "Non-smoking rooms",
+      "amenities": ["Wifi", "Free parking", "Outdoor dining area", "Laptop safe", "Electric kettle", "Flat-screen TV", "Air conditioning","Sea view", "Cable channels"],
+      "location": " Iakinthou 1, Kavala, 65404, Greece",
+      "distance": 1.3,
+      "rating": 4.3
+    },
+    {
+      "id" : 5,
+      "title" : "Hotel Francis Arlene",
+      "price" : 101,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/286909088.jpg?k=1510b92642805a109b3fa571b18ab301409cd429f39040da985d97a72a466cbd&o=&hp=1",
+      "featured" : true,
+      "property_type_id": 5,
+      "description": "This property is 2 minutes walk from the beach. Located at 100 m from the ocean, Hotel Francis Arlene offers a terrace and a garden. Free Wi-Fi access is available. Francis Arlene’s air-conditioned rooms have a patio with views of the city and offer a minibar and TV with cable channels. Featuring a bath, private bathrooms also come with free toiletries. Facilities offered include a tour desk, and the property also features free parking. Plaza las Americas Cancun Mall is at a distance of 13.6 km. The hotel is 2.7 km from Dolphin Discovery Isla Mujeres and 3 km from Playa Norte. Isla Mujeres Airport can be reached within a 10 minutes’ drive, and the ferry station with service to Cancun is at a distance of 6 km. Couples particularly like the location — they rated it 9.2 for a two-person trip.",
+      "house_rules": "No smoking rooms",
+      "amenities": ["Wifi", "Shower", "Toilet", "Towels", "Linen Socket near the bed", "Seating Area", "TV", "Refrigerator", "Mosquito net", "Fan", "Outdoor furniture", "Outdoor dining area", "Cable channels", "Wardrobe or closet"],
+      "location": "Av. Guerrero 7 Colonia Centro, 77400 Isla Mujeres, Mexico",
+      "distance": 1.9,
+      "rating": 4.7
+    },
+    {
+      "id" : 6,
+      "title" : "Serenity",
+      "price" : 1089.00,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort1.webp",
+      "featured" : true,
+      "property_type_id": 6,
+      "description": "Located in Myrtle Beach, less than 1 km from Myrtle Beach and 2.8 km from Arcadia Beach, Serenity offers free WiFi, a garden and air conditioning. It is set 1.2 km from Carolina Opry Theater and provides an ATM. The holiday home is equipped with 2 bedrooms, 2 bathrooms, bed linen, towels, a TV with cable channels, a dining area, a fully equipped kitchen, and a balcony with lake views. Alabama Theater is 6 km from the holiday home, while Broadway at the Beach is 10 km away. The nearest airport is Myrtle Beach International Airport, 16 km from Serenity.",
+      "house_rules": "No smoking rooms",
+      "amenities": ["Wifi", "Swimming pools", "Outdoor furniture", "Heating", "Tea/Coffee maker", "Mini golf","Smoke alarms", "Air conditioning", "Dishwasher", "Kitchen"],
+      "location": "Myrtle Beach, 29572, United States ",
+      "distance": 2.1,
+      "rating": 5.0
+    },
+    {
+      "id" : 7,
+      "title" : "Hollywood ",
+      "price" : 18.50,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/53523139.jpg?k=8a46b2835522493fb0b40729792585da6c1be9a42d90b74a3dde6aae80ddc8a4&o=&hp=1",
+      "featured" : true,
+      "property_type_id": 1,
+      "description": "Located in the heart of Hollywood city centre, this California hotel is 5 minutes' walk from the Famous Walk of Fame and the Hollywood/Highland Underground. All guest rooms include free WiFi. Each comfortably furnished room at the Hollywood Motel 6 features a flat-screen TV with extended cable channels. All air-conditioned rooms include a work desk and a private bathroom. Offering all non-smoking facilities, the Motel 6 Hollywood provides a 24-hour reception. Guests can enjoy free morning coffee in the lobby. This hotel is about 5 minutes' walk from a variety of attractions including Dolby Theatre, TCL Theatre and the Hollywood Wax Museum. Universal Studios Hollywood is 4.8 km away.",
+      "house_rules": "Non-smoking room",
+      "amenities": ["Wifi", "Bathroom", "Linen", "WiFi is available in all areas and is free of charge.", "Telephone", "TV", "Air conditioning", "Desk"],
+      "location": "1738 North Whitley Avenue, Hollywood, Los Angeles, CA 90028, United States",
+      "distance": 4.8,
+      "rating": 4.0
+    },
+    {
+      "id" : 8,
+      "title" : "Auberge Le Cabanon",
+      "price" : 250,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/107448846.jpg?k=846f95eefab2f094ab4007fa27873c9ed6745876007ec43654461ec3da2d062f&o=&hp=1",
+      "featured" : true,
+      "property_type_id": 2,
+      "description": "Situated on the shores of Lake St Stanislas, this Saint-Zenon resort offers swimming and fishing. A restaurant and bar are located on site. An indoor pool is available. Satellite TV is featured in all rooms. After a day of fun in the sun, guests of Auberge Le Cabanon can relax in their simply furnished room. All rooms are equipped with a fridge. Each en suite bathroom includes toiletries and a hairdryer. Featuring billiards, a game room is offered at Auberge Le Cabanon Saint-Zenon. A children’s playground offers family fun. Guests can tour the lake via canoe available on site.",
+      "house_rules": "No pets allowed, Non-smoking rooms",
+      "amenities": ["Wifi", "TV", "Air conditioning", "Desk", "Cable channels"],
+      "location": " 6170 rue Principale, J0K 3M0 Saint Zenon, Canada",
+      "distance": 1.1,
+      "rating": 4.2
+    },
+    {
+      "id" : 9,
+      "title" : "Gîte des Hauteurs et Café de la place",
+      "price" : 33.00,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/15029816.jpg?k=f17696ea34a2e055979ad63a677a0d8bd4f2779abdf0e5595ef0df210479be7e&o=&hp=1",
+      "featured" : false,
+      "property_type_id": 3,
+      "description": "This Saint Zénon features an on-site restaurant with local cuisine on the menu. It offers rooms with a balcony and is 6 minutes’ walk from the city centre. Toiletries and slippers are provided in each room at Gîte des Hauteurs et Café de la place. In-room tea and coffee-making facilities are also available. After dining at Gîte des Hauteurs’ on-site restaurant, guests can lounge on the terrace. Guests can also enjoy free Wi-Fi access. Several fishing sites are nearby, including Lac Carré 12 km away. Hunting is a popular activity 3.5 km away. Parc Régional Des Sept-Chutes, 8 km away, is ideal for hiking and picnics.",
+      "house_rules": "No pets allowed",
+      "amenities": ["Wifi", "TV", "Air conditioning", "Desk", "Cable channels"],
+      "location": " 300 rue Principale, J0K 3M0 Saint Zenon, Canada",
+      "distance": 5.6,
+      "rating": 4.7
+    },
+    {
+      "id" : 10,
+      "title" : "GEC Granville Suites Downtown",
+      "price" : 200.50,
+      "img" : "https:/resort-destination-app.s3.us-east-2.amazonaws.com/resort2.webp",
+      "featured" : false,
+      "property_type_id": 4,
+      "description": "This property is 20 minutes walk from the beach. Located in the Granville Entertainment District in downtown Vancouver, GEC Granville Suites is only 2 km from Vancouver Convention. On-site dining is possible at The White Spot Restaurant and Lounge, which serves American cuisine. Free WiFi is available. A flat-screen TV, a seating area and a safe are provided in contemporary rooms. Light wood furnishings and a coffee make are included. Select rooms offer a microwave, fridge and iPod docking station. Guests can relax on the rooftop deck or sauna. GEC Granville Suites also provides a gym. Granville Suites is 7 minutes’ walk from the Yaletown Roundhouse Station. The Port Metro cruise ship terminal and Rogers Arena are both within 2 km away. This is our guests' favourite part of Vancouver, according to independent reviews. ",
+      "house_rules": "Non smoking rooms",
+      "amenities": ["Wifi", "Wifi","Air conditioning","Flat-screen TV", "Cable channels","Streaming service (like Netflix)", "Refrigerator"],
+      "location": "718 Drake Street, V6Z 2W6 Vancouver, Canada ",
+      "distance": 0.1,
+      "rating": 4.8
+    },
+    {
+      "id" : 11,
+      "title" : "Motel Adam",
+      "price" : 30,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/268485509.jpg?k=78fdf776c007c268ffd965ed836eb09f6edaae742e58a08294b245015caec8c3&o=&hp=1",
+      "featured" : false,
+      "property_type_id": 5,
+      "description": "Motel Adam is just off Autoroute 50 and is 15 minutes' drive from downtown Ottawa. It features a heated outdoor pool and free WiFi access throughout the entire motel. A cable TV is available in all rooms at the Adam Motel. Rooms are also equipped with a refrigerator, hairdryer and a work desk. Motel Adam has an on-site gift shop. The front desk is staffed 24 hours a day, and there is a conference room, as well as laundry facilities, available. A continental breakfast is included. Les Promenades de l'Outaouais shopping centre is 5 minutes' drive from Adam Motel. Casino du lac Leamy is 9.2 km away.",
+      "house_rules": "No pets allowed",
+      "amenities": ["Wifi", "Shower", "Toilet", "Towels", "Linen Socket near the bed", "Seating Area", "TV", "Refrigerator"],
+      "location": "100 Greber Boulevard, J8T 3P8 Gatineau, Canada ",
+      "distance": 9.1,
+      "rating": 3.2
+    },
+    {
+      "id" : 12,
+      "title" : "B&B Hôtel",
+      "price" : 30,
+      "img" : "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/320898797.jpg?k=e34a689a17d9dde0d234ba26cb9dd3e07a9f858a6590f5ae47e976f8f187d11a&o=&hp=1",
+      "featured" : false,
+      "property_type_id": 6,
+      "description": "Situated in Magny-le-Hongre, B&B Hôtel à Disneyland® Paris offers accommodation 34 km from Paris with free high speed WiFi and free private parking. Additional facilities include vending machines and a gift shop. Rooms are air-conditioned and feature satellite TV and Bultex mattresses. A private bathroom is included in each room and is equipped with a shower and toilet. From 18:00, guests can enjoy budget-friendly meals including pizza, pasta, salad and desserts at the hotel's snack bar. The Disneyland® Paris Parks are located 3 km from B&B Hôtel à Disneyland® Paris and are accesible via a free shuttle. La Vallée Village Outlet Mall is also 3 km away. Charles De Gaulle Airport is 28 km from the hotel and Marne-la-Vallée TGV Train Station is an 8-minute drive away.",
+      "house_rules": "No pets allowed",
+      "amenities": ["Wifi", "Shower", "Toilet", "Towels", "Linen Socket near the bed", "Seating Area", "TV", "Refrigerator"],
+      "location": "Disneyland® Paris - 60 Avenue De La Fosse Des Pressoirs, 77700 Magny-le-Hongre, France ",
+      "distance": 15.6,
+      "rating": 4.8
+    }
+  ],
+  "property_types" : [
+    {
+      "id": 1,
+      "title": "Apartments",
+      "img": "/property_type_apartment.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Resorts",
+      "img": "/property_type_resort.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Condos",
+      "img": "/property_type_condos.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Hotels",
+      "img": "/property_type_hotels.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Motels",
+      "img": "/property_type_motels.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "B&B",
+      "img": "/property_type_b&b.jpeg"
+    }
+  ]
+}

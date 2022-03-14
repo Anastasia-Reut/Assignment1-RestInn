@@ -1,0 +1,27 @@
+.property-type-card {
+    cursor: pointer;
+    flex-basis: 23%;
+    min-height: 10rem;
+    margin-top: 1.5rem;
+}
+
+.property-type-card > div {
+    background-size: cover;
+    padding-top: 80%;
+    background-position: center;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    border-radius: 0.5rem;
+}
+
+.property-type-card > div:hover {
+    opacity: 1;
+}
+
+.property-type-card h5 {
+    margin-top: 1rem;
+}
+
+.property-type-title {
+    color: #353b48;
+}
