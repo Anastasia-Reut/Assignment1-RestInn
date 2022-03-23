@@ -15,6 +15,9 @@ var HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config();
 
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: false}));
+
 function OnHttpStart(){
     console.log("Express server started on port: " + HTTP_PORT);
 }
@@ -25,6 +28,14 @@ app.use(express.static("public"));
 const {engine} = require("express-handlebars");
 app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+const clientSessions = require("client-sessions");
+app.use(clientSessions({
+    cookieName: "session",
+    secret: "cap805_project",
+    duration: 2*60*1000,
+    activeDuration: 1000*60
+}));
 
 const uri = process.env.MONGODB_URI;
 
@@ -46,6 +57,30 @@ app.get("/productListing", (req, res) => {res.render("productListing", {layout: 
 
 //#region Authentication
 app.get("/login", (req, res) => {res.render("login", {layout: false});});
+app.post("/login", (req, res) => {
+//    console.log(req.body.username);
+    const username = req.body.username;
+    const password = req.body.password;
+    if (username == "" || password == ""){
+        return res.render("login", {errorMsg: "Both fields are required!", layout: false});
+    }
+    if (!(username == process.env.USERNAME)){
+        return res.render("login", {errorMsg: "Username does not match", layout: false});
+    }
+    if (!(password == process.env.PASSWORD)){
+        return res.render("login", {errorMsg: "Password does not match", layout: false});
+    }
+
+    req.session.user = {
+        username: username,
+        email: process.env.EMAIL,
+        isAdmin: true,
+        firstName: "Anna",
+        lastName: "Korchatov"
+    };
+    res.redirect("/dashboard");
+});
+
 app.get("/logout", (req, res) => {
     // todo logout stuff
     res.redirect("/");
@@ -62,24 +97,48 @@ app.get("/logout", (req, res) => {
 
 app.get("/admin_login", (req, res) => {res.render("admin_login", {layout: false});});
 app.get("/logout", (req, res) => {
-    // todo logout stuff
+    req.session.reset();
     res.redirect("/");
 });
 //#endregion
 
 //#region AuthorizedUsers
+app.get("/dashboard", ensureLogin, (req, res) => {
+    res.render("dashboard", {user: req.session.user, layout: false});});
 app.get("/prescription", (req, res) => {res.render("prescription", {layout: false});});
 app.get("/cart", (req, res) => {res.render("cart", {layout: false});});
 app.get("/checkout", (req, res) => {res.render("checkout", {layout: false});});
 //#endregion
 
 //#region AdminPages
+app.get("/admin/dashboard", ensureAdmin, (req, res) => {
+    res.render("adminDashboard", {user: req.session.user, layout: false});});
 //#endregion
 
 //#endregion
 
 //#region Custom Functions and Startup
 app.listen(HTTP_PORT, OnHttpStart);
+
+function ensureLogin(req, res, next){
+    if (!req.session.user){
+        res.redirect("/login");
+    }
+    else{
+        next();
+    }
+}
+
+function ensureAdmin(req, res, next){
+    if (!req.session.user.isAdmin){
+        res.redirect("/login");
+    }
+    else{
+        next();
+    }
+}
+
+
 //#endregion
 
 //heroku config:set MONGODB_URI="mongodb+srv://jasa_admin:senecaCAPproject@cluster0.j5nek.mongodb.net/fierce-eyrie-60970?retryWrites=true&w=majority"
