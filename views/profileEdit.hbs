@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EDIT PROFILE</title>
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        
+        <div class="container">            
+            {{> header user}}
+            <div class="contentContainer">
+                <h1>EDIT USER PROFILE</h1>
+                <p>{{user.firstName}} {{user.lastName}}</p>
+                <form method="POST" action="/profile/edit">
+                    <p>
+                        <input type="hidden" name="username" value="{{user.username}}"/>
+                        <label class="fixedlabel">User Name:</label> {{user.username}}<br/>
+                        <label class="fixedlabel">First Name:</label> {{user.firstName}}
+                            <input type="text" name="firstName" value="{{user.firstName}}"/><br/>
+                        <label class="fixedlabel">Last Name:</label> {{user.lastName}}
+                            <input type="text" name="lastName" value="{{user.lastName}}"/><br/>
+                        <label class="fixedlabel">E-mail:</label> {{user.email}}
+                            <input type="text" name="email" value="{{user.email}}"/><br/>
+                        <label class="fixedlabel">Admin:</label> 
+                            {{#if user.isAdmin}}
+                                <input type="checkbox" name="isAdmin" checked />
+                            {{else}}
+                                <input type="checkbox" name="isAdmin" />
+
+                            {{/if}}
+                            <br/>
+                        <label class="fixedlabel"></label>
+                            <button type="submit" name="Submit">Save Changes</button>
+                    </p>
+                </form>
+            </div>            
+            {{> footer }}
+        </div>
+    </body>
+</html>

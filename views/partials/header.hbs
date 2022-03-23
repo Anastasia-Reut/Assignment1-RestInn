@@ -4,11 +4,16 @@
         {{#if username}}
             Welcome <em>{{firstName}} {{lastName}}</em>!
             | <a href="/profile">Profile</a>
+            | <a href="/dashboard">Dashboard</a>
+            {{#if isAdmin}}
+                | <a href="/admin/dashboard">Admin</a>
+            {{/if}}
+            {{#if isDoctor}}
+                | <a href="/doctor/dashboard">Doctor</a>
+            {{/if}}
             | <a href="/logout">Logout</a>
         {{else}}
-            <a href="/login"><img class="icon" src="/images/user.png" alt="User's Log In"></a>
-            <a href="/doctor_login"><img class="icon" src="/images/doctor1.png" alt="Doctor's Log In"></a>
-		    <a href="/admin_login"><img class="icon" src="/images/admin1.png" alt="Admin's Log In"></a>
+            <a href="/login">LogIn</a>
         {{/if}}
 	</ul>
 </header>

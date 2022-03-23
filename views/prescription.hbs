@@ -11,7 +11,7 @@
             {{> header user}}
             <div class="contentContainer">
                 <br>
-                <h1>Welcome, doctor XXX!</h1>
+                <h1>Welcome, doctor {{user.lastName}}!</h1>
                 <br>
                 <form action="/doctor_prescription" method="POST">
                     <div class="form-item">   
