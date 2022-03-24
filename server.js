@@ -7,6 +7,7 @@
         1.0.1 - Mar 9, 2022 - Anastasia, Jay, Anna - more pages added
         1.0.2 - Mar 22, 2022 - Anna - Login staff added (without DB)
         1.0.3 - Mar 23, 2022 - Anna - Login staff added (with mongoDB)
+        1.0.4 - Mar 24, 2022 - Anna - Product listing, delete/add/edit product, Profile edit
 */
 //#endregion
 
@@ -44,6 +45,7 @@ app.use(clientSessions({
 //database connections
 const mongoose = require("mongoose");
 const UserModel = require("./models/UserModel.js");
+const ProductModel = require("./models/ProductModel.js");
 mongoose.connect(process.env.DBCONN, {useUnifiedTopology: true});
 
 //#endregion
@@ -59,7 +61,15 @@ app.get("/prpolicy", (req, res) => {res.render("prpolicy", {user: req.session.us
 app.get("/reviews", (req, res) => {res.render("reviews", {user: req.session.user, layout: false});});
 app.get("/articles", (req, res) => {res.render("articles", {user: req.session.user, layout: false});});
 app.get("/product", (req, res) => {res.render("product", {user: req.session.user, layout: false});});
-app.get("/productListing", (req, res) => {res.render("productListing", {user: req.session.user, layout: false});});
+app.get("/productListing", (req, res) => {
+    ProductModel.find()
+        .lean()
+        .exec()
+        .then((products) => {
+            res.render("productListing", {products: products, hasProducts: !!products.length, user: req.session.user, layout: false});
+        })
+    
+});
 //#endregion
 
 //#region Authentication
@@ -141,22 +151,44 @@ app.post("/profile/edit", ensureLogin, (req, res) => {
     if (isAdmin == "on") {isAd = true;}
     var isDoc = false;
     if (isDoctor == "on") {isDoc = true;}
-    req.session.user = {
-        login_id: usr.login_id,
-        email: usr.email,
-        isAdmin: isAd,
-        isDoctor: isDoc,
-        user_first_name: usr.user_first_name,
-        user_last_name: usr.user_last_name,
-        dob: usr.dob,
-        phone: usr.phone,
-        user_address: usr.user_address,
-        doctor_license_no: usr.doctor_license_no,
-        ohip_no: usr.ohip_no,
-        user_prescription: usr.user_prescription        
-    };
-    res.redirect("/profile");
+    
+    UserModel.updateOne({login_id: login_id}, {
+        $set: {
+            login_id: login_id,
+            email: email,
+            isAdmin: isAd,
+            isDoctor: isDoc,
+            user_first_name: user_first_name,
+            user_last_name: user_last_name,
+            dob: dob,
+            phone: phone,
+            user_address: user_address,
+            doctor_license_no: doctor_license_no,
+            ohip_no: ohip_no,
+            user_prescription: user_prescription
+        }
+    })
+    .exec()
+    .then(() => {
+        req.session.user = {
+            login_id: login_id,
+            email: email,
+            isAdmin: isAd,
+            isDoctor: isDoc,
+            user_first_name: user_first_name,
+            user_last_name: user_last_name,
+            dob: dob,
+            phone: phone,
+            user_address: user_address,
+            doctor_license_no: doctor_license_no,
+            ohip_no: ohip_no,
+            user_prescription: user_prescription        
+        };
+        res.redirect("/profile");
+    })   
 });        
+
+
 
 app.get("/cart", (req, res) => {res.render("cart", {user: req.session.user, layout: false});});
 app.get("/checkout", (req, res) => {res.render("checkout", {user: req.session.user, layout: false});});
@@ -165,6 +197,71 @@ app.get("/checkout", (req, res) => {res.render("checkout", {user: req.session.us
 //#region AdminPages
 app.get("/admin/dashboard", ensureAdmin, (req, res) => {
     res.render("adminDashboard", {user: req.session.user, layout: false});});
+
+//add new product
+app.get("product/edit", ensureAdmin, (req, res) => {
+    res.render("productEdit", {user: req.session.user, layout: false});
+})
+
+//edit existing product
+app.get("product/edit/:productID", ensureAdmin, (req, res) => {
+    const productID = req.params.productID;
+    ProductModel.findOne({product_id: productID})
+        .lean()
+        .exec()
+        .then((product) => {
+            res.render("productEdit", {user: req.session.user, product: product, layout: false})
+        .catch(() => {});
+        });    
+});
+
+app.post("product/edit", ensureAdmin, (req, res) => {
+    const product = new ProductModel({
+        product_id: req.body.product_id,
+        product_description: req.body.product_description,
+        available_stock: req.body.available_stock,
+        price: req.body.price,
+        is_prescribed: req.body.is_prescribed,
+        product_category_id: req.body.product_category_id,
+        product_category_description: req.body.product_category_description,
+        product_detail: req.body.product_detail,
+        product_images_construct: req.body.product_images_construct
+    });
+    if (req.body.edit === "1"){
+        //edit product
+        ProductModel.updateOne({product_id: product.product_id},{
+            $set: {
+                product_id: product.product_id,
+                product_description: product.product_description,
+                available_stock: product.available_stock,
+                price: product.price,
+                is_prescribed: product.is_prescribed,
+                product_category_id: product.product_category_id,
+                product_category_description: product.product_category_description,
+                product_detail: product.product_detail,
+                product_images_construct: product.product_images_construct
+            }
+        })
+        .exec()
+        .then((err) => {
+            res.redirect("/productListing");
+        });
+    }
+    else {
+        //add
+        product.save((err) => {
+            res.redirect("/productListing");
+        });
+    }
+});
+
+app.get("product/delete/:productID", ensureAdmin, (req, res) => {
+    const productID = req.params.productID;
+    ProductModel.deleteOne({product_id: productID})
+        .then((err) => {
+            res.render("productListing");
+        });    
+});
 //#endregion
 
 //#region DoctorPages
