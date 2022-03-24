@@ -36,7 +36,7 @@ app.use(clientSessions({
     cookieName: "session",
     secret: "cap805_project",
     duration: 2*60*1000,
-    activeDuration: 1000*60
+    activeDuration: 1000*60*60
 }));
 
 //const uri = process.env.MONGODB_URI;

@@ -1,8 +1,8 @@
 <header>
     <a class="brand" href="/">JASA Online Pharmacy <img class="logo" src="/images/bag1.jpg" alt="JASA Pharmacy"></a>
 	<ul>
-        {{#if username}}
-            Welcome <em>{{firstName}} {{lastName}}</em>!
+        {{#if login_id}}
+            Welcome <em>{{user_first_name}} {{user_last_name}}</em>!
             | <a href="/profile">Profile</a>
             | <a href="/dashboard">Dashboard</a>
             {{#if isAdmin}}
