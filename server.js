@@ -8,6 +8,7 @@
         1.0.2 - Mar 22, 2022 - Anna - Login staff added (without DB)
         1.0.3 - Mar 23, 2022 - Anna - Login staff added (with mongoDB)
         1.0.4 - Mar 24, 2022 - Anna - Product listing, delete/add/edit product, Profile edit
+        1.0.5 - Mar 24, 2022 - Anastasia - CSS updated
 */
 //#endregion
 
