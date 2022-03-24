@@ -1,19 +1,19 @@
 <header>
-    <a class="brand" href="/">JASA Online Pharmacy <img class="logo" src="/images/bag1.jpg" alt="JASA Pharmacy"></a>
+    <a class="brand" href="/"> <img class="logo" src="/images/bag1.jpg" alt="JASA Pharmacy">JASA Online Pharmacy</a>
 	<ul>
         {{#if login_id}}
             Welcome <em>{{user_first_name}} {{user_last_name}}</em>!
-            | <a href="/profile">Profile</a>
-            | <a href="/dashboard">Dashboard</a>
+            | <a class="button" href="/profile">Profile</a>
+            | <a class="button" href="/dashboard">Dashboard</a>
             {{#if isAdmin}}
-                | <a href="/admin/dashboard">Admin</a>
+                | <a class="button" href="/admin/dashboard">Admin</a>
             {{/if}}
             {{#if isDoctor}}
-                | <a href="/doctor/dashboard">Doctor</a>
+                | <a class="button" href="/doctor/dashboard">Doctor</a>
             {{/if}}
-            | <a href="/logout">Logout</a>
+            | <a class="button" href="/logout">Logout</a>
         {{else}}
-            <a href="/login">LogIn</a>
+            <a class="button" href="/login">LogIn</a>
         {{/if}}
 	</ul>
 </header>

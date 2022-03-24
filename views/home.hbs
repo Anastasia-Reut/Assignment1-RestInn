@@ -11,32 +11,36 @@
     <div class="container">
         {{> header user }}
         <div class="contentContainer">
-            <br>
-            <h1>Welcome to JASA online pharmacy!</h1>
-            <br>
-            <h2>Our product categories:</h2>
+            
+            <h1 class="header">Welcome to JASA online pharmacy!</h1>
+            
+            <h4>Our product categories:</h4>
             <ul>
-                <li><a href="/productListing">Beauty</a></li>
-                <li><a href="/productListing">Flu / Allergy</a></li>
-                <li><a href="/productListing">Vitamins</a></li>
-                <li><a href="/productListing">Children Care</a></li>
+                <li><a class="button" href="/productListing">Beauty</a></li>
+                <li><a class="button" href="/productListing">Flu / Allergy</a></li>
+                <li><a class="button" href="/productListing">Vitamins</a></li>
+                <li><a class="button" href="/productListing">Children Care</a></li>
             </ul>
-            <br>
-            <h2>Most popular products:</h2>
+            <div class="clear"></div>
+            <h4>Most popular products:</h4>
             <ul>
-                <li><a href="/product">Product 1</a></li>
-                <li><a href="/product">Product 2</a></li>
-                <li><a href="/product">Product 3</a></li>
-                <li><a href="/product">Product 4</a></li>
+                <li><a class="button" href="/product">Product 1</a></li>
+                <li><a class="button" href="/product">Product 2</a></li>
+                <li><a class="button" href="/product">Product 3</a></li>
+                <li><a class="button" href="/product">Product 4</a></li>
             </ul>
-            <p>These links are here temporarily:</p>
+            <div class="clear"></div>
+            <h4>These links are here temporarily:</h4>
             <ul>
-                <li><a href="/cart">View cart</a></li>
-                <li><a href="/checkout">Checkout</a></li>
+                <li><a class="button" href="/cart">View cart</a></li>
+                <li><a class="button" href="/checkout">Checkout</a></li>
+                
             </ul>
+            <div class="clear"></div>
         </div>
-        {{> footer}}
+       
     </div>
+     {{> footer}}
 </body>
 
 </html>
