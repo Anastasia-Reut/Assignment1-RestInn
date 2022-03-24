@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>JASA online pharmacy - Products</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="/css/theme.css" type="text/css" />
+	</head>
 
-<head>
-    <title>JASA online pharmacy</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/css/theme.css" type="text/css" />
-</head>
-
-<body>
-    <div class="container">
-        {{> header user}}
-        <div class="contentContainer">
-            <div class="row">
-                <main>
-                    <center>
-                        <input class="searchKey" type="text" id="searchKey" name="searchKey"><button
-                            type="button">Search</button><br><br>
-                    </center>
-                    <button class="filter" type="button">Filter</button>
-                    <table class="productList">
-
-                        <tr>
-                            <th>
-                                <img src="/images/Capture.jpg" alt="Product 1" class="productListImg">
-                                <p>
-                                    <a href="/product">Product 1</a>
-                                <p> Details for product 1</p>
-                                </p>
-                            </th>
-                            <th>
-                                <img src="/images/Capture.jpg" alt="Product 2" class="productListImg">
-                                <p>
-                                    <a href="/product">Product 2</a>
-                                <p> Details for product 2</p>
-                                </p>
-                            </th>
-                            <th>
-                                <img src="/images/Capture.jpg" alt="Product 3" class="productListImg">
-                                <p>
-                                    <a href="/product">Product 3</a>
-                                <p> Details for product 3</p>
-                                </p>
-                            </th>
-                            <th>
-                                <img class="productListImg" src="/images/Capture.jpg" alt="Product 4">
-                                <p>
-                                    <a href="/product">Product 4</a>
-                                <p> Details for product 4</p>
-                                </p>
-                            </th>
-                        </tr>
-                    </table>
-                </main>                
+	<body>
+        <div class="container">
+            {{> header user}}
+            <div class="contentContainer">
+                <center>
+                    <input class="searchKey" type="text" id="searchKey" name="searchKey">
+                    <button type="button">Search</button><br/><br/>
+                </center>
+                <button class="filter" type="button">Filter</button>
+                {{#if user.isAdmin}}
+                    <p><a href="/admin/addProduct">Add new product</a></p>
+                {{/if}}
+                <h1>Products</h1>
+                {{#if hasProducts}}
+                <table class="productList">
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th colspan="2">Product</th>
+                        <th>Price</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    {{#each products}}
+                    <tr>
+                        <td><a href="/product/edit/{{product_id}}">Edit</a></td>
+                        <td><img src="/images/Capture.jpg" alt="Product 1" class="productListImg"></td>
+                        <td><a href="/product/{{product_id}}">{{product_description}}</a></td>
+                        <td>{{price}} CAD</td>
+                        <td><a href="/product/delete/{{product_id}}">Delete</a></td>
+                    </tr>
+                    {{else}}
+                    <tr><td colspan="5">No product was found!</td></tr>
+                    {{/each}}
+                </table>
+                {{else}}
+                    <p>Nothing to show</p>
+                {{/if}}
             </div>
+            {{> footer}}
         </div>
-        {{> footer}}
-    </div>
-</body>
-
+	</body>
 </html>

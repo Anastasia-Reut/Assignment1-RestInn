@@ -34,4 +34,4 @@ const userSchema = new Schema({
     "user_prescription": [{"prescription_id": Number}]
 });
 
-module.exports = mongoose.model("USERS", userSchema);
+module.exports = mongoose.model("users", userSchema);
