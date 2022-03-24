@@ -10,15 +10,15 @@
             {{> header user}}
             <div class="contentContainer">
                 <h1>EDIT USER PROFILE</h1>
-                <p>{{user.firstName}} {{user.lastName}}</p>
+                <p>{{user.user_first_name}} {{user.user_last_name}}</p>
                 <form method="POST" action="/profile/edit">
                     <p>
-                        <input type="hidden" name="username" value="{{user.username}}"/>
-                        <label class="fixedlabel">User Name:</label> {{user.username}}<br/>
-                        <label class="fixedlabel">First Name:</label> {{user.firstName}}
-                            <input type="text" name="firstName" value="{{user.firstName}}"/><br/>
-                        <label class="fixedlabel">Last Name:</label> {{user.lastName}}
-                            <input type="text" name="lastName" value="{{user.lastName}}"/><br/>
+                        <input type="hidden" name="login_id" value="{{user.login_id}}"/>
+                        <label class="fixedlabel">User Name:</label> {{user.login_id}}<br/>
+                        <label class="fixedlabel">First Name:</label> {{user.user_first_name}}
+                            <input type="text" name="user_first_name" value="{{user.user_first_name}}"/><br/>
+                        <label class="fixedlabel">Last Name:</label> {{user.user_last_name}}
+                            <input type="text" name="user_last_name" value="{{user.user_last_name}}"/><br/>
                         <label class="fixedlabel">E-mail:</label> {{user.email}}
                             <input type="text" name="email" value="{{user.email}}"/><br/>
                         <label class="fixedlabel">Admin:</label> 

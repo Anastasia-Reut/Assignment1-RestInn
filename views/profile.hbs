@@ -10,11 +10,11 @@
             {{> header user}}
             <div class="contentContainer">
                 <h1>USER PROFILE</h1>
-                <p>{{user.firstName}} {{user.lastName}}</p>
+                <p>{{user.user_first_name}} {{user.user_last_name}}</p>
                 <p>
-                    <label class="fixedlabel">User Name:</label> {{user.username}}<br/>
-                    <label class="fixedlabel">First Name:</label> {{user.firstName}}<br/>
-                    <label class="fixedlabel">Last Name:</label> {{user.lastName}}<br/>
+                    <label class="fixedlabel">User Name:</label> {{user.login_id}}<br/>
+                    <label class="fixedlabel">First Name:</label> {{user.user_first_name}}<br/>
+                    <label class="fixedlabel">Last Name:</label> {{user.user_last_name}}<br/>
                     <label class="fixedlabel">E-mail:</label> {{user.email}}<br/>
                     <label class="fixedlabel">Admin:</label> {{user.isAdmin}}<br/>
                     <a href="/profile/edit">Edit</a>

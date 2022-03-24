@@ -11,29 +11,29 @@
             {{> header user}}
             <div class="contentContainer">
                 <br>
-                <h1>Welcome, doctor {{user.lastName}}!</h1>
+                <h1>Welcome, doctor {{user.user_last_name}}!</h1>
                 <br>
                 <form action="/doctor_prescription" method="POST">
                     <div class="form-item">   
-                        <label for="license">Doctor License Number</label>
-                        <input type="text" id="license" name="license">
+                        <label for="doctor_license_no">Doctor License Number</label>
+                        <input type="text" id="doctor_license_no" name="doctor_license_no">
                     </div>
                     <button>Verify</button>
                     <div class="form-item">   
-                        <label for="firstname">Patient First Name</label>
-                        <input type="text" id="firstname" name="firstname">
+                        <label for="user_first_name">Patient First Name</label>
+                        <input type="text" id="user_first_name" name="user_first_name">
                     </div>
                     <div class="form-item">
-                        <label for="lastname">Patient First Name</label>
-                        <input type="text" id="lastname" name="lastname">
+                        <label for="user_last_name">Patient First Name</label>
+                        <input type="text" id="user_last_name" name="user_last_name">
                     </div>   
                     <div class="form-item">
                         <label for="dob">Date of Birth</label>
                         <input type="text" name="dob" id="dob">
                     </div>   
                     <div class="form-item">
-                        <label for="medical_no">Medical ID Number</label>
-                        <input type="text" name="medical_no" id="medical_no">
+                        <label for="ohip_no">OHIP Number</label>
+                        <input type="text" name="ohip_no" id="ohip_no">
                     </div>    
                     <div class="form-item">
                         <label for="product_description">Prescribed drug</label>
