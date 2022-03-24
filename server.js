@@ -5,14 +5,15 @@
     Version:
         1.0.0 - Feb 24, 2022 - Anna - Initial Version
         1.0.1 - Mar 9, 2022 - Anastasia, Jay, Anna - more pages added
-        1.0.2 - Mar 23, 2022 - Anna - Login staff added
+        1.0.2 - Mar 22, 2022 - Anna - Login staff added (without DB)
+        1.0.3 - Mar 23, 2022 - Anna - Login staff added (with mongoDB)
 */
 //#endregion
 
 //#region Server Setup
 var express = require("express");
 var app = express();
-var HTTP_PORT = process.env.PORT || 8081;
+var HTTP_PORT = process.env.PORT || 8080;
 
 require('dotenv').config();
 
@@ -38,7 +39,12 @@ app.use(clientSessions({
     activeDuration: 1000*60
 }));
 
-const uri = process.env.MONGODB_URI;
+//const uri = process.env.MONGODB_URI;
+
+//database connections
+const mongoose = require("mongoose");
+const UserModel = require("./models/UserModel.js");
+mongoose.connect(process.env.DBCONN, {useUnifiedTopology: true});
 
 //#endregion
 
@@ -59,27 +65,42 @@ app.get("/productListing", (req, res) => {res.render("productListing", {user: re
 //#region Authentication
 app.get("/login", (req, res) => {res.render("login", {user: req.session.user, layout: false});});
 app.post("/login", (req, res) => {
-    const username = req.body.username;
+    const login_id = req.body.login_id;
     const password = req.body.password;
-    if (username == "" || password == ""){
-        return res.render("login", {errorMsg: "Both fields are required!", user: req.session.user, layout: false});
-    }
-    if (!(username == process.env.USERNAME)){
-        return res.render("login", {errorMsg: "Username does not match", user: req.session.user, layout: false});
-    }
-    if (!(password == process.env.PASSWORD)){
-        return res.render("login", {errorMsg: "Password does not match", user: req.session.user, layout: false});
-    }
+    UserModel.findOne({login_id: login_id})
+        .exec()
+        .then((usr) => {
+            if (!usr){
+                //user not found
+                res.render("login", {errorMsg: "Both fields are required!", user: req.session.user, layout: false});
+            }
+            else {
+                //user found
+                if (password == usr.password){
+                    //password matches
+                    req.session.user = {
+                        login_id: usr.login_id,
+                        email: usr.email,
+                        isAdmin: usr.isAdmin,
+                        isDoctor: usr.isDoctor,
+                        user_first_name: usr.user_first_name,
+                        user_last_name: usr.user_last_name,
+                        dob: usr.dob,
+                        phone: usr.phone,
+                        user_address: usr.user_address,
+                        doctor_license_no: usr.doctor_license_no,
+                        ohip_no: usr.ohip_no,
+                        user_prescription: usr.user_prescription
+                    };
+                    res.redirect("/dashboard");
+                }
+                else {
+                    //password does not match
+                    res.render("login", {errorMsg: "Password does not match", user: req.session.user, layout: false});
+                }
+            }
+        })
 
-    req.session.user = {
-        username: username,
-        email: process.env.EMAIL,
-        isAdmin: true,
-        isDoctor: true,
-        firstName: "Anna",
-        lastName: "Korchatov"
-    };
-    res.redirect("/dashboard");
 });
 
 app.get("/logout", (req, res) => {
@@ -103,19 +124,36 @@ app.get("/profile", ensureLogin, (req, res) => {
 app.get("/profile/edit", ensureLogin, (req, res) => {
     res.render("profileEdit", {user: req.session.user, layout: false});});   
 app.post("/profile/edit", ensureLogin, (req, res) => {
-    const username = req.body.username;
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
+    const login_id = req.body.login_id;
+    const user_first_name = req.body.user_first_name;
+    const user_last_name = req.body.user_last_name;
     const email = req.body.email;
     const isAdmin = req.body.isAdmin;
+    const isDoctor = req.body.isDoctor;
+    const dob = req.body.dob;
+    const phone = req.body.phone;
+    const user_address = req.body.user_address;
+    const doctor_license_no = req.body.doctor_license_no;
+    const ohip_no = req.body.ohip_no;
+    const user_prescription = req.body.user_prescription;
+
     var isAd = false;
     if (isAdmin == "on") {isAd = true;}
+    var isDoc = false;
+    if (isDoctor == "on") {isDoc = true;}
     req.session.user = {
-        username: username,
-        email: process.env.EMAIL,
+        login_id: usr.login_id,
+        email: usr.email,
         isAdmin: isAd,
-        firstName: firstName,
-        lastName: lastName
+        isDoctor: isDoc,
+        user_first_name: usr.user_first_name,
+        user_last_name: usr.user_last_name,
+        dob: usr.dob,
+        phone: usr.phone,
+        user_address: usr.user_address,
+        doctor_license_no: usr.doctor_license_no,
+        ohip_no: usr.ohip_no,
+        user_prescription: usr.user_prescription        
     };
     res.redirect("/profile");
 });        
