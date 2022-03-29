@@ -87,6 +87,21 @@ header ul{
     border-radius: 34px;
 }
 
+button{
+    margin: 10px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #6d9bb8;
+    padding: 5px 15px;
+    background: #6d9bb8;
+    color: #2d556e;
+    
+}
+
+button:hover{
+    border: 2px solid #ccc;
+}
+
 a:hover{
     color:#2d556e;
     text-decoration:underline;
@@ -94,8 +109,8 @@ a:hover{
 }
 
 table, th, td {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+   /* border-bottom: 1px solid black;*/
+   /* border-top: 1px solid black;*/
     border-left: none;
     border-right: none;
     border-collapse: collapse;
@@ -104,7 +119,7 @@ table, th, td {
 tr:nth-child(odd) {background-color: #96b6cc;}
 
 table{
-    width: 70%;
+    width: 100%;
 }
 th {
     height: 70px;
@@ -155,10 +170,16 @@ ul {
 
 .contentContainer{
     padding: 10px;
+    color: #2d556e;
+}
+
+.fixedlabel{
+    font-style: italic;
 }
 
 label{
     display:block;
+    margin-top: 10px;
 }
 
 .form-item{
@@ -170,11 +191,18 @@ label{
   }
   
   #left {
-    border-bottom: 1px solid lightgray;
-    width: 100px;
+   /* border-bottom: 1px solid lightgray;*/
+    width: 200px;
   }
   
   #right {
-    border-bottom: 1px solid lightgray;
+   /* border-bottom: 1px solid lightgray;*/
     width: 40%;
+  }
+
+  .searchKey{
+    width: 300px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #2d556e;
   }

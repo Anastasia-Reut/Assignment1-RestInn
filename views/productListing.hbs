@@ -10,15 +10,14 @@
         <div class="container">
             {{> header user}}
             <div class="contentContainer">
-                <center>
+                <div>
                     <input class="searchKey" type="text" id="searchKey" name="searchKey">
                     <button type="button">Search</button><br/><br/>
-                </center>
+                </div>
                 <button class="filter" type="button">Filter</button>
                 {{#if user.isAdmin}}
                     <p><a href="/admin/addProduct">Add new product</a></p>
                 {{/if}}
-                <h1>Products</h1>
                 {{#if hasProducts}}
                 <table class="productList">
                     <tr>
